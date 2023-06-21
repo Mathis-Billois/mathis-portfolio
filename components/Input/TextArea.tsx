@@ -1,9 +1,6 @@
 export default function TextArea({ name, placeholder, extraStyle }: any) {
 	const firstLetter = name.charAt(0).toUpperCase();
 	const otherLetters = name.slice(1);
-	console.log(firstLetter);
-	console.log(otherLetters);
-	console.log(firstLetter + otherLetters);
 	const labelValue = firstLetter + otherLetters;
 
 	return (
