@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	background-color: #1e1e1e;
+	scroll-behavior: smooth;
+}
+
+main {
+	font-family: "Poppins", sans-serif;
+}
+
+.bg-home-color {
+	background-color: #1e1e1e;
+}
+
+.main-title {
+	color: #7152c4;
+	font-family: "Permanent Marker", cursive;
+}
+
+.section-title {
+	color: #7152c4;
+}
+
+.bg-footer {
+	background-color: #7152c4;
+}
+
+.footer-title {
+	font-family: "Permanent Marker", cursive;
+}
+
+.button-color {
+	background-color: #7152c4;
+}
+
+.button-color:hover {
+	background-color: #493680;
+}
+
+.border-nav-color {
+	background-color: #7152c4;
+}
