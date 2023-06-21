@@ -3,10 +3,6 @@ import { useEffect, useState } from "react";
 export default function MobileNavbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
-	useEffect(() => {
-		console.log(isOpen);
-	}, [isOpen]);
-
 	return (
 		<nav>
 			<div className="visible bg-home-color fixed z-50 lg:invisible flex text-white w-full flex-col">
