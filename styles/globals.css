@@ -43,3 +43,28 @@ main {
 .border-nav-color {
 	background-color: #7152c4;
 }
+
+.mobile-nav-text-color {
+	color: #7152c4;
+}
+
+.underline {
+	display: inline;
+	position: relative;
+	text-decoration: none;
+}
+
+.underline:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0%;
+	left: 0px;
+	height: 3px;
+	transition: 0.25s cubic-bezier(0.72, -0.01, 0.19, 0.92);
+	background: #7152c4;
+}
+
+.underline:hover:after {
+	width: 100%;
+}

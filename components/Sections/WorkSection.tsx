@@ -12,7 +12,7 @@ export default function WorkSection() {
 				</div>
 			</div>
 			<div className="flex overflow-x-scroll">
-				<div className="flex flex-nowrap lg:flex-wrap lg:justify-center lg:mx-40 lg:mt-8 lg:mt-4 ">
+				<div className="flex flex-nowrap lg:flex-wrap lg:justify-center lg:mx-40 lg:mt-8 ">
 					<div
 						data-aos="fade-zoom-in"
 						data-aos-easing="ease-in-back"
