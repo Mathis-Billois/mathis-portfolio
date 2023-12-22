@@ -15,13 +15,19 @@ export default function ContactSection() {
 				<div data-aos="fade-right" className="lg:w-1/4 w-full lg:text-left text-center space-y-11">
 					<MainTitle>Let's Talk</MainTitle>
 					<p className="lg:text-lg text-base text-white lg:mx-0 mx-6">
-						I am currently looking for an apprenticeship for September 2023 as a Web Developer and if my profile interests you, do not hesitate to
-						contact me.
+						I am currently looking for an internship in June and an apprenticeship for September 2024 as a Web Developer and if my profile interests
+						you, do not hesitate to contact me.
 					</p>
 					<div className="flex flex-row lg:justify-start justify-center space-x-4">
-						<Image className="bg-white rounded-full" alt="logo" src="/linkedin.png" height={25} width={25} />
-						<Image className="bg-white rounded-full" alt="logo" src="/github.png" height={25} width={25} />
-						<Image className="bg-white rounded-full" alt="logo" src="/instagram.png" height={25} width={25} />
+						<a target="_blank" href="https://www.linkedin.com/in/mathis-billois-16b167284/">
+							<Image className="bg-white rounded-full" alt="logo" src="/linkedin.png" height={25} width={25} />
+						</a>
+						<a target="_blank" href="https://github.com/Mathis-Billois">
+							<Image className="bg-white rounded-full" alt="logo" src="/github.png" height={25} width={25} />
+						</a>
+						<a target="_blank" href="https://www.instagram.com/mts.crea/">
+							<Image className="bg-white rounded-full" alt="logo" src="/instagram.png" height={25} width={25} />
+						</a>
 					</div>
 				</div>
 				<div className="flex flex-col m-6 lg:m-0 lg:w-72">

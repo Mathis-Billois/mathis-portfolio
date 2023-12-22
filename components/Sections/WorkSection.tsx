@@ -1,3 +1,4 @@
+import WorkCard from "../Card/WorkCard";
 import SectionTitle from "../Title/SectionTitle";
 
 export default function WorkSection() {
@@ -11,50 +12,10 @@ export default function WorkSection() {
 					<h2>WEB DESIGN</h2>
 				</div>
 			</div>
-			<div className="flex overflow-x-scroll">
-				<div className="flex flex-nowrap lg:flex-wrap lg:justify-center lg:mx-40 lg:mt-8 ">
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
-					<div
-						data-aos="fade-zoom-in"
-						data-aos-easing="ease-in-back"
-						data-aos-delay="400"
-						data-aos-offset="0"
-						className="bg-zinc-400 w-52 h-48 rounded-2xl lg:m-10 m-5"
-					></div>
+			<div className="flex lg:justify-center items-center overflow-x-scroll snap-x">
+				<div className="flex flex-row flex-nowrap lg:flex-wrap lg:justify-center lg:mx-40 lg:my-8">
+					<WorkCard title="PROJECT 1" description="voici mon tout premier projet ..." image="/Logo.PNG" />
+					<WorkCard title="PROJECT 2" description="voici mon second projet ..." image="/Logo1.png" />
 				</div>
 			</div>
 		</div>

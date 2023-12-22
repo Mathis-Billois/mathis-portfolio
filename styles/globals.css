@@ -32,14 +32,6 @@ main {
 	font-family: "Permanent Marker", cursive;
 }
 
-.button-color {
-	background-color: #7152c4;
-}
-
-.button-color:hover {
-	background-color: #493680;
-}
-
 .border-nav-color {
 	background-color: #7152c4;
 }

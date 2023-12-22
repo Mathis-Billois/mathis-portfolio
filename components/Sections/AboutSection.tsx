@@ -14,11 +14,11 @@ export default function AboutSection() {
 						<SectionTitle>About</SectionTitle>
 						<MainTitle>Mathis Billois</MainTitle>
 						<p className=" text-white mt-8 lg:text-lg text-base">
-							Hi, I'm Mathis, a student at EEMI to become a Digital Project Manager. I am a very curious person, which leads me to have a great
-							interest in the digital world.
+							Hi, I'm Mathis, a student at EMM to become a Web Developper. I am a very curious person, which leads me to have a great interest in the
+							digital world.
 							<br></br>
-							<br></br>I let you discover my portfolio site to show you what I can do as a student in Web development and design. Feel free to email
-							me back if you have any questions or anything.
+							<br></br>I let you discover my portfolio site to show you what I can do as a student in Web development. Feel free to email me back if
+							you have any questions or anything.
 						</p>
 						<h1 className="text-3xl text-white mt-14 mb-7">SKILLS</h1>
 					</div>
