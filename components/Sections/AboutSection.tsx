@@ -7,7 +7,7 @@ export default function AboutSection() {
 		<div id="about" className="bg-black lg:h-screen h-auto flex flex-col items-center justify-center w-full">
 			<div className="flex flex-col lg:flex-row flex-1 items-center justify-center px-10 py-20 lg:p-0 w-full">
 				<div className="flex flex-col w-full lg:w-2/5 items-center justify-center mb-12 lg:m-0">
-					<Image className="flex-1 rounded-md" alt="logo" src="/Logo1.png" height={250} width={250} />
+					<Image className="flex-1 rounded-md" alt="logo" src="/CV.png" height={250} width={250} />
 				</div>
 				<div className="flex flex-col w-full lg:w-2/5 lg:mr-36">
 					<div className="flex flex-col w-full overflow-x-hidden">

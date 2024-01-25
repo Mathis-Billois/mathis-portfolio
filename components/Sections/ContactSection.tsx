@@ -15,7 +15,7 @@ export default function ContactSection() {
 				<div data-aos="fade-right" className="lg:w-1/4 w-full lg:text-left text-center space-y-11">
 					<MainTitle>Let's Talk</MainTitle>
 					<p className="lg:text-lg text-base text-white lg:mx-0 mx-6">
-						I am currently looking for an internship in June and an apprenticeship for September 2024 as a Web Developer and if my profile interests
+						I am currently looking for an internship in May and an apprenticeship for September 2024 as a Web Developer and if my profile interests
 						you, do not hesitate to contact me.
 					</p>
 					<div className="flex flex-row lg:justify-start justify-center space-x-4">

@@ -60,3 +60,7 @@ main {
 .underline:hover:after {
 	width: 100%;
 }
+
+.ease-in-out-transition {
+	transition: all 0.3s ease-in-out;
+}

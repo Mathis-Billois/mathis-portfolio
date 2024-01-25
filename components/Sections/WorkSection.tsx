@@ -8,19 +8,13 @@ export default function WorkSection() {
 				<div className="flex flex-col overflow-x-hidden w-full">
 					<SectionTitle extraStyle="text-center mb-9">work</SectionTitle>
 					<div className="text-white text-center lg:text-lg lg:mb-0 mb-12 text-sm flex justify-center lg:space-x-14 space-x-8">
-						<h2>ALL</h2>
-						<h2>WEB DEVELOPMENT</h2>
-						<h2>WEB DESIGN</h2>
+						<h2>My Projects</h2>
 					</div>
 				</div>
 				<div className="flex lg:justify-center items-center overflow-x-scroll snap-x">
 					<div className="flex flex-row flex-nowrap lg:flex-wrap lg:justify-center lg:mx-40 lg:my-8 space-x-4">
-						<WorkCard
-							title="PROJECT 1"
-							description="voici mon tout premier projet vjdbvbdbbdvhdbvbdhvbd jbvjsbdvkdbvskbvksbvsdjvb..."
-							image="/Logo.PNG"
-						/>
-						<WorkCard title="PROJECT 2" description="voici mon second projet ..." image="/Logo1.png" />
+						<WorkCard title="Portfolio" description="J'ai le plaisir de vous présenter mon Portfolio Website." image="/Logo.PNG" />
+						<WorkCard title="Mangaka" description="Voici un projet réalisé en cours afin d'évaluer mes compétences." image="/logo-mangaka.png" />
 					</div>
 				</div>
 			</div>
