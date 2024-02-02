@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import MainTitle from "../Title/MainTitle";
 
 export default function MobileNavbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -48,18 +49,18 @@ export default function MobileNavbar() {
 					</div>
 				</div>
 				{isOpen === true && (
-					<div className="flex flex-col mobile-nav-text-color items-center text-white text-xl pt-20">
-						<a className="p-5" href="#home" onClick={() => closeMenuAndScrollTo("home")}>
-							Home
+					<div className="flex flex-col mobile-nav-text-color items-center text-white text-xl pt-10">
+						<a className="p-2" href="#home" onClick={() => closeMenuAndScrollTo("home")}>
+							<MainTitle>Home</MainTitle>
 						</a>
-						<a className="p-5" href="#about" onClick={() => closeMenuAndScrollTo("about")}>
-							About
+						<a className="p-2" href="#about" onClick={() => closeMenuAndScrollTo("about")}>
+							<MainTitle>About</MainTitle>
 						</a>
-						<a className="p-5" href="#work" onClick={() => closeMenuAndScrollTo("work")}>
-							Work
+						<a className="p-2" href="#work" onClick={() => closeMenuAndScrollTo("work")}>
+							<MainTitle>Work</MainTitle>
 						</a>
-						<a className="p-5" href="#contact" onClick={() => closeMenuAndScrollTo("contact")}>
-							Contact
+						<a className="p-2" href="#contact" onClick={() => closeMenuAndScrollTo("contact")}>
+							<MainTitle>Contact</MainTitle>
 						</a>
 					</div>
 				)}
