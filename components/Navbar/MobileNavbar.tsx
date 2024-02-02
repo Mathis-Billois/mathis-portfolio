@@ -1,37 +1,70 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function MobileNavbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+	};
+
+	const closeMenuAndScrollTo = (sectionId: string) => {
+		setIsOpen(false);
+		const section = document.getElementById(sectionId);
+
+		if (section) {
+			section.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "visible";
+		}
+
+		return () => {
+			document.body.style.overflow = "visible";
+		};
+	}, [isOpen]);
+
 	return (
 		<nav>
-			<div className="visible bg-home-color fixed z-50 lg:invisible flex text-white w-full flex-col border-b border-zinc-500">
-				<div onClick={() => setIsOpen(!isOpen)} className="m-6">
-					<svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-						<path
-							fill-rule="evenodd"
-							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-							clip-rule="evenodd"
-						></path>
-					</svg>
+			<div className={`fixed z-50 lg:invisible flex text-white w-full flex-col ${isOpen ? "open" : ""}`}>
+				<div className={`m-6 ${isOpen ? "blurred translate-x-0" : "translate-x-0"}`}>
+					<div className="flex h-16 w-16 cursor-pointer items-center justify-center rounded-3xl bg-white p-2" onClick={toggleMenu}>
+						<div className="space-y-2">
+							<span
+								className={`block h-1 w-10 origin-center rounded-full bg-slate-500 transition-transform ease-in-out ${
+									isOpen ? "translate-y-1.5 rotate-45" : ""
+								}`}
+							></span>
+							<span
+								className={`block h-1 w-8 origin-center rounded-full bg-violet-500 transition-transform ease-in-out ${
+									isOpen ? "w-10 -translate-y-1.5 -rotate-45" : ""
+								}`}
+							></span>
+						</div>
+					</div>
 				</div>
 				{isOpen === true && (
-					<div className="flex flex-col text-left mobile-nav-text-color">
-						<a className="border-y border-white p-5" href="#home">
+					<div className="flex flex-col mobile-nav-text-color items-center text-white text-xl pt-20">
+						<a className="p-5" href="#home" onClick={() => closeMenuAndScrollTo("home")}>
 							Home
 						</a>
-						<a className="p-5" href="#about">
+						<a className="p-5" href="#about" onClick={() => closeMenuAndScrollTo("about")}>
 							About
 						</a>
-						<a className="border-t border-white p-5" href="#work">
+						<a className="p-5" href="#work" onClick={() => closeMenuAndScrollTo("work")}>
 							Work
 						</a>
-						<a className="border-y border-white p-5" href="#contact">
+						<a className="p-5" href="#contact" onClick={() => closeMenuAndScrollTo("contact")}>
 							Contact
 						</a>
 					</div>
 				)}
 			</div>
+			{isOpen && <div className="overlay" onClick={toggleMenu}></div>}
 		</nav>
 	);
 }

@@ -4,7 +4,7 @@ import MainTitle from "../Title/MainTitle";
 export default function HomeSection() {
 	return (
 		<div>
-			<div id="home" className="bg-home-color h-screen flex items-center justify-center flex-col">
+			<div id="home" className="bg-home-color h-screen flex items-center justify-center flex-col overflow-x-hidden">
 				<Image data-aos="fade-zoom-in" data-aos-duration="2500" className="rounded-xl" alt="logo" src="/PP.jpg" height={250} width={250} />
 				<div className="text-center">
 					<MainTitle>Mathis Billois</MainTitle>
