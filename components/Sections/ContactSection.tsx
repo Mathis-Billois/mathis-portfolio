@@ -1,11 +1,51 @@
+import { useState } from "react";
 import MainTitle from "../Title/MainTitle";
 import Button from "../Button/Button";
 import SectionTitle from "../Title/SectionTitle";
 import Input from "../Input/Input";
-import Image from "next/image";
 import TextArea from "../Input/TextArea";
 
 export default function ContactSection() {
+	const [formData, setFormData] = useState({
+		name: "",
+		email: "",
+		message: "",
+	});
+
+	const handleChange = (e: { target: { name: any; value: any } }) => {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e: { preventDefault: () => void }) => {
+		e.preventDefault();
+		try {
+			const response = await fetch("http://localhost:8888/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+			if (response.ok) {
+				alert("Message sent successfully!");
+
+				setFormData({
+					name: "",
+					email: "",
+					message: "",
+				});
+			} else {
+				alert("Failed to send message.");
+			}
+		} catch (error) {
+			console.error("Error sending message:", error);
+			alert("An error occurred while sending the message.");
+		}
+	};
+
 	return (
 		<div id="contact" className="bg-black w-full lg:h-screen h-auto flex flex-col py-12">
 			<div className="flex flex-col overflow-x-hidden w-full">
@@ -18,25 +58,16 @@ export default function ContactSection() {
 						I am currently looking for an internship in May and an apprenticeship for September 2024 as a Web Developer and if my profile interests
 						you, do not hesitate to contact me.
 					</p>
-					<div className="flex flex-row lg:justify-start justify-center space-x-4">
-						<a target="_blank" href="https://www.linkedin.com/in/mathis-billois-16b167284/">
-							<Image className="bg-white rounded-full" alt="logo" src="/linkedin.png" height={25} width={25} />
-						</a>
-						<a target="_blank" href="https://github.com/Mathis-Billois">
-							<Image className="bg-white rounded-full" alt="logo" src="/github.png" height={25} width={25} />
-						</a>
-						<a target="_blank" href="https://www.instagram.com/mts.crea/">
-							<Image className="bg-white rounded-full" alt="logo" src="/instagram.png" height={25} width={25} />
-						</a>
-					</div>
 				</div>
 				<div className="flex flex-col m-6 lg:m-0 lg:w-72">
-					<Input placeholder="Write your name here" name="name" />
-					<Input placeholder="Write your email here" name="email" />
-					<TextArea placeholder="Write your message here" name="message" />
-					<div className="text-right mt-2 lg:mt-8">
-						<Button>Send Message</Button>
-					</div>
+					<form onSubmit={handleSubmit}>
+						<Input placeholder="Write your name here" name="name" value={formData.name} onChange={handleChange} />
+						<Input placeholder="Write your email here" name="email" value={formData.email} onChange={handleChange} />
+						<TextArea placeholder="Write your message here" name="message" value={formData.message} onChange={handleChange} />
+						<div className="text-right mt-2 lg:mt-8">
+							<Button type="submit">Send Message</Button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

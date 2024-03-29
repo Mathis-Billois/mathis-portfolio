@@ -20,24 +20,3 @@ export default function WorkCard({ title, description, image }: any) {
 		</div>
 	);
 }
-
-/*<div
-			data-aos="fade-zoom-in"
-			data-aos-easing="ease-in-back"
-			data-aos-delay="400"
-			data-aos-offset="0"
-			className="snap-center flex text-white h-full w-72 rounded-2xl lg:m-10 m-5"
-		>
-			<div className="transition ease-in-out hover:scale-105 duration-300">
-				<div className="flex">
-					<Image className="rounded-t-lg" alt="logo" src={image} height={255} width={255} />
-				</div>
-				<div className="bg-black flex flex-col space-y-4 p-4 justify-center items-left rounded-b-2xl">
-					<h5>{title}</h5>
-					<p>{description}</p>
-					{ TODO : Replace this button by a link to the project }
-					<Button>More details</Button>
-				</div>
-			</div>
-		</div>
-*/
