@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
 	cors({
-		origin: "http://localhost:3000https://mathis-portfolio.vercel.app/",
+		origin: ["http://localhost:3000", "https://mathis-portfolio.vercel.app"],
 	})
 );
 
