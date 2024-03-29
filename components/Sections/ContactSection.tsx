@@ -23,6 +23,7 @@ export default function ContactSection() {
 		e.preventDefault();
 		try {
 			const response = await fetch("http://localhost:8888/api/contact", {
+				// Mettez l'URL correcte ici
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

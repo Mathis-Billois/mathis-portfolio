@@ -5,7 +5,12 @@ const cors = require("cors");
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+	cors({
+		origin: "http://localhost:3000https://mathis-portfolio.vercel.app/",
+	})
+);
+
 app.post("/api/contact", (req, res) => {
 	const { name, email, message } = req.body;
 
