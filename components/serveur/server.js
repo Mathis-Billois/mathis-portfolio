@@ -18,6 +18,9 @@ app.post("/api/contact", (req, res) => {
 	console.log("Email:", email);
 	console.log("Message:", message);
 
+	// Ajoutez l'en-tête Access-Control-Allow-Private-Network
+	res.setHeader("Access-Control-Allow-Private-Network", "true");
+
 	res.status(200).send("Message received successfully!");
 });
 
